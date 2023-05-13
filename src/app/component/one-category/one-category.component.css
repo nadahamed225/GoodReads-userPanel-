@@ -1,0 +1,29 @@
+.category{
+    color:#5c5c5c;
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    height: 30rem;
+}
+a{
+  text-decoration: none;
+  color: #444;
+  
+}
+.example-card{
+  width: 90%;
+  min-height: 35rem;
+}
+.unimation{
+  transition: .4s;
+}
+.unimation:hover{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16),
+  0 3px 6px rgba(0,0,0,0.23);
+  transform: translate(0px, -15px);
+}

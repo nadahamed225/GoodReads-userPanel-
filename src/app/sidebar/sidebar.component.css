@@ -1,0 +1,39 @@
+.headerText {
+  color: #303030;
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  padding: 2.5rem 1rem;
+}
+img {
+  width: 200px;
+}
+.mat-icon {
+  vertical-align: center;
+  margin-right: 1rem;
+  position: relative;
+  top: 5px;
+}
+.mat-divider {
+  border-top: 2px solid white;
+}
+.content {
+  margin: auto;
+  padding: 15px;
+}
+.content-anhor {
+  display: block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #8f8f98;
+  margin: 5px 5px;
+  padding: 10px;
+}
+.content-anhor:hover {
+  cursor: pointer;
+  background-color: #65bf8b;
+  color: white;
+  border-left: 4px solid #27ae60;
+}

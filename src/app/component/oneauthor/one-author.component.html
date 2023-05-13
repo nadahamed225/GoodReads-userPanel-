@@ -1,0 +1,44 @@
+<section class="deal">
+  <div class="content">
+    <h3>{{ author.firstName }} {{ author.lastName }}</h3>
+    <h1>{{ author.birthDate | date : "dd-MM-yyyy" }}</h1>
+    <p>
+      {{ author.description }}
+    </p>
+  </div>
+  <div class="image">
+    <img [src]="imageAuthor + '/' + author.photo" />
+  </div>
+</section>
+<section class="featured" id="featured">
+  <h1 class="heading">
+    <span>{{authorBooks.length >0 ? "Authors Books" : "This Author Has No Books"}}</span>
+  </h1>
+  
+  <div class="swiper featured-slider">
+    <div class="swiper-wrapper">
+      <div *ngFor="let authorBook of authorBooks" class="swiper-slide box">
+        <div class="image pt-3">
+          <img [src]="imageBook + '/' + authorBook.book.image" alt="" />
+        </div>
+        <div class="content">
+          <h3>{{ authorBook.book.title }}</h3>
+          <div class="price">
+            <p-rating 
+              iconCancelClass="pi pi-times" 
+              [ngModel]="authorBook.avg.avg"
+              [readonly]="true"
+              [cancel]="false"
+            ></p-rating>
+            {{ authorBook.avg.avg }} - {{ authorBook.avg.count }} ratings
+          </div>
+          <a routerLink="/books/{{ authorBook.book._id }}" class="btn"
+            >Go to Book</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
